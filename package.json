@@ -1,0 +1,23 @@
+{
+  "name": "rust-quadtree",
+  "version": "1.0.0",
+  "description": "QuadTree made in Rust with no dependencies and NodeJS support",
+  "keywords": [
+    "quadtree",
+    "nodejs",
+    "typescript",
+    "wasm",
+    "javascript",
+    "js"
+  ],
+  "author": "DenisC",
+  "license": "MIT",
+  "homepage": "https://github.com/DenisC/rust-quadtree",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DenisC/rust-quadtree"
+  },
+  "bugs": {
+    "url": "https://github.com/DenisC/rust-quadtree/issues"
+  }
+}
