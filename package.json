@@ -8,7 +8,8 @@
     "typescript",
     "wasm",
     "javascript",
-    "js"
+    "js",
+    "ts"
   ],
   "author": "DenisC",
   "license": "MIT",
