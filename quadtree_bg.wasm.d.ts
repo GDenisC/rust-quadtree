@@ -22,7 +22,5 @@ export function __wbg_set_xy_x(a: number, b: number): void;
 export function __wbg_get_xy_y(a: number): number;
 export function __wbg_set_xy_y(a: number, b: number): void;
 export function xy_new(a: number, b: number): number;
-export function xy_get_x(a: number): number;
-export function xy_get_y(a: number): number;
 export function __wbindgen_add_to_stack_pointer(a: number): number;
 export function __wbindgen_free(a: number, b: number, c: number): void;

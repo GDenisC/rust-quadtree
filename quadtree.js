@@ -304,20 +304,6 @@ class XY {
         this.__wbg_ptr = ret >>> 0;
         return this;
     }
-    /**
-    * @returns {number}
-    */
-    get_x() {
-        const ret = wasm.xy_get_x(this.__wbg_ptr);
-        return ret;
-    }
-    /**
-    * @returns {number}
-    */
-    get_y() {
-        const ret = wasm.xy_get_y(this.__wbg_ptr);
-        return ret;
-    }
 }
 module.exports.XY = XY;
 

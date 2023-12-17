@@ -1,4 +1,4 @@
-const { QuadTree: RSQuadTree, AABB, XY } = require('./quadtree');
+const { QuadTree: RSQuadTree, AABB, XY } = require('./quadtree.js');
 
 class Point extends XY {
     constructor(x, y) {
@@ -12,14 +12,6 @@ class Point extends XY {
         return new Point(xy.get_x(), xy.get_y());
     }
 
-    get x() {
-        return this.get_x();
-    }
-
-    get y() {
-        return this.get_y();
-    }
-
     toString() {
         return `(${this.x}, ${this.y})`;
     }
@@ -31,14 +23,18 @@ class Rect extends AABB {
     }
 }
 
-class Circle extends XY {
+class Circle {
     constructor(x, y, radius) {
-        super(x, y);
+        this.x = x;
+        this.y = y;
         this.radius = radius;
     }
 
     get aabb() {
-        return new Rect(this.get_x() - this.radius / 2, this.get_y() - this.radius / 2, this.get_x() + this.radius / 2, this.get_y() + this.radius / 2);
+        return new Rect(
+            this.x - this.radius / 2, this.y - this.radius / 2,
+            this.x + this.radius / 2, this.y + this.radius / 2
+        );
     }
 }
 

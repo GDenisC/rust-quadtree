@@ -66,14 +66,6 @@ export class XY {
 */
   constructor(x: number, y: number);
 /**
-* @returns {number}
-*/
-  get_x(): number;
-/**
-* @returns {number}
-*/
-  get_y(): number;
-/**
 */
   x: number;
 /**
