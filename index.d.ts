@@ -21,4 +21,4 @@ class QuadTree extends RSQuadTree {
     get points(): Point[];
 }
 
-export { QuadTree, XY, AABB }
+export { QuadTree, AABB, XY, Point, Rect, Circle }

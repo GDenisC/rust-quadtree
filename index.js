@@ -9,7 +9,7 @@ class Point extends XY {
      * @param { XY } xy
      */
     static from(xy) {
-        return new Point(xy.get_x(), xy.get_y());
+        return new Point(xy.x, xy.y);
     }
 
     toString() {
@@ -62,4 +62,4 @@ class QuadTree extends RSQuadTree {
     }
 }
 
-module.exports = { Point, Rect, Circle, QuadTree };
+module.exports = { Point, XY, AABB, Rect, Circle, QuadTree, RSQuadTree };
