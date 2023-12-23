@@ -200,6 +200,11 @@ class QuadTree {
     }
     /**
     */
+    clear() {
+        wasm.quadtree_clear(this.__wbg_ptr);
+    }
+    /**
+    */
     split() {
         wasm.quadtree_split(this.__wbg_ptr);
     }

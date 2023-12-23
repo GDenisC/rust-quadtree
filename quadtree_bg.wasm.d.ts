@@ -12,6 +12,7 @@ export function aabb_contains_aabb(a: number, b: number): number;
 export function __wbg_quadtree_free(a: number): void;
 export function quadtree_new(a: number): number;
 export function quadtree_insert(a: number, b: number): number;
+export function quadtree_clear(a: number): void;
 export function quadtree_split(a: number): void;
 export function quadtree_query(a: number, b: number, c: number): void;
 export function quadtree_has_children(a: number): number;

@@ -41,6 +41,9 @@ export class QuadTree {
   insert(point: XY): boolean;
 /**
 */
+  clear(): void;
+/**
+*/
   split(): void;
 /**
 * @param {AABB} aabb
