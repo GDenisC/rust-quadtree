@@ -1,24 +1,17 @@
-import { QuadTree as RSQuadTree, AABB, XY } from './quadtree';
+import { QuadTree as RSQuadTree, AABB, Point } from './quadtree';
 
-class Point extends XY {
-    constructor(public x: number, public y: number);
-    static from(xy: XY): Point;
-    toString(): string;
+interface QuadTreeObject {
+    get rect(): Rect | AABB;
 }
 
 class Rect extends AABB {
-    constructor(x1: number, y1: number, x2: number, y2: number);
-}
-
-class Circle {
-    constructor(public x: number, public y: number, public radius: number);
-    get aabb(): Rect;
+    constructor(x: number, y: number, width: number, height: number);
 }
 
 class QuadTree extends RSQuadTree {
     constructor(bound: [number, number]);
-    query(aabb: Rect | Circle): Point[];
+    query(aabb: AABB | Rect | QuadTreeObject): Point[];
     get points(): Point[];
 }
 
-export { QuadTree, XY, AABB }
+export { QuadTree, QuadTreeObject, AABB, Rect, Point }

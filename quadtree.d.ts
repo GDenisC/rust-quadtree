@@ -10,10 +10,10 @@ export class AABB {
 */
   constructor(min: XY, max: XY);
 /**
-* @param {XY} xy
+* @param {Point} xy
 * @returns {boolean}
 */
-  contains_point(xy: XY): boolean;
+  contains_point(xy: Point): boolean;
 /**
 * @param {AABB} aabb
 * @returns {boolean}
@@ -28,6 +28,26 @@ export class AABB {
 }
 /**
 */
+export class Point {
+  free(): void;
+/**
+* @param {number} x
+* @param {number} y
+* @param {number} index
+*/
+  constructor(x: number, y: number, index: number);
+/**
+*/
+  index: number;
+/**
+*/
+  x: number;
+/**
+*/
+  y: number;
+}
+/**
+*/
 export class QuadTree {
   free(): void;
 /**
@@ -35,10 +55,10 @@ export class QuadTree {
 */
   constructor(bound: AABB);
 /**
-* @param {XY} point
+* @param {Point} point
 * @returns {boolean}
 */
-  insert(point: XY): boolean;
+  insert(point: Point): boolean;
 /**
 */
   clear(): void;
@@ -47,17 +67,24 @@ export class QuadTree {
   split(): void;
 /**
 * @param {AABB} aabb
-* @returns {(XY)[]}
+* @returns {(Point)[]}
 */
-  query(aabb: AABB): (XY)[];
+  query(aabb: AABB): (Point)[];
 /**
 * @returns {boolean}
 */
   has_children(): boolean;
 /**
-* @returns {(XY)[]}
+* @returns {(Point)[]}
 */
-  get_points(): (XY)[];
+  get_points(): (Point)[];
+/**
+* @returns {(AABB)[]}
+*/
+  get_view(): (AABB)[];
+/**
+*/
+  bound: AABB;
 }
 /**
 */
