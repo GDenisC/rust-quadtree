@@ -22,10 +22,6 @@ class QuadTree extends RSQuadTree {
             return super.query(rect);
         }
     }
-
-    get points() {
-        return this.get_points();
-    }
 }
 
-module.exports = { Point, Rect, QuadTree };
+module.exports = { Point, XY, AABB, Rect, QuadTree };
